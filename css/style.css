@@ -1,0 +1,608 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(56, 92%, 52%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(246, 16%, 45%);
+  --border-color: hsl(230, 50%, 90%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(230, 100%, 96%);
+  --black-color:hsl(100,0%,0%,100%);
+  --container-color: hsl(230, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --header-font:"Italiana", sans-serif;
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Montagu Slab", serif;
+  
+  --biggest-font-size: 4.0rem;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 650px) {
+  :root {
+    --biggest-font-size: 5.5rem;
+    --h1-font-size: 3.25rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 3rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+
+
+/*========== 
+	Color changes in some parts of 
+	the website, in dark theme
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1920px;
+  margin-inline: 0rem;
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  
+}
+.container > * {
+
+flex: 1 100%;
+
+}
+.grid {
+  display:block;
+  gap: 1rem;
+}
+
+.section {
+  padding-block: 0.5rem 1rem;
+  
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-family: var(--second-font);
+  margin-bottom: 2rem;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+/*=============== HEADER & NAV ===============*/
+
+
+/* Navigation for mobile devices */
+
+
+/* Add shadow header */
+
+
+/* Active link */
+
+
+/*=============== SEARCH ===============*/
+
+
+/* Show search */
+
+
+/*=============== LOGIN ===============*/
+
+
+/* Show login */
+
+
+/*=============== HOME ===============*/
+.home__swiper{
+    margin: initial;
+    height: 360px;
+}
+.home__container{
+    padding-top: 1rem;
+    row-gap: 2.5rem;
+   
+    
+}
+
+.home__section{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.76),rgba(0, 0, 0, 0.76)), url(images/proberaum-special-part-1-vorschau.jpg);
+}
+
+.home__data{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.home__title{
+   color: var(--white-color);
+    font-size: var(--biggest-font-size);
+    font-family: var(--header-font);
+    margin-bottom:3rem; 
+    
+}
+
+.home__description{
+    margin-bottom: 2rem;
+    color: var(--white-color);
+    margin: 2rem 1rem;
+}
+
+
+.home__image{
+    display: grid;
+}
+
+.home__article, .home__img{
+width: 220px;
+transition: scale .4s;
+}
+
+.home__article{
+    scale: .7;
+}
+
+/* Swiper class */
+
+.swiper-slide-active,
+.swiper-slide-duplicate-active{
+    scale:1;
+}
+
+/*=============== BUTTON ===============*/
+
+.button {
+  
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 1.5rem;
+    margin: 2rem;
+    transition: box-shadow .4s;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color:hsl(54, 100%, 78%);
+    box-shadow:0 4px 32px hsla(46, 72%, 32%, 0.397);
+}
+
+.button-sec {
+  text-decoration: none;
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 1.5rem;
+  margin: 2rem;
+  transition: box-shadow .4s;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  
+}
+
+.button-sec:hover{
+  cursor: pointer;
+  background-color:hsla(233, 4%, 48%, 0.4);
+  box-shadow:0 4px 32px hsla(231, 5%, 48%, 0.4);
+}
+/*=============== Itembox1 ===============*/
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 7rem;
+}
+.itembox1__container{
+background-color: black;
+padding-bottom: 10px;
+padding-top: 5rem;
+}
+.itembox1__title{
+  font-size: var(--biggest-font-size);
+  font-family: var(--header-font);
+  color:rgb(112, 112, 112);
+  margin-top: 2rem;
+  text-align: center;
+  
+}
+.itembox__barcode{
+  float: right;
+  
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.text-title{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  align-items: center;
+  top:30%;
+  left: 0%;
+  justify-content: center;
+  flex-direction: column;
+  color: #f4f4f4;
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:bolder;
+}
+.item {
+  display: flex;
+  padding: 1rem;
+  flex: 1 1 calc(33.333% - 10px); /* Drei Items pro Zeile mit etwas Abstand */
+  flex-direction: column;
+  margin: 5px;
+  position: relative;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  opacity: 60%;
+}
+.text {
+  color: var(--white-color);
+  padding: 20px;
+  background-color: #1b1b1b;
+  text-align:unset;
+}
+
+
+@media (max-width: 768px) {
+  .item {
+      flex: 1 1 100%; /* Auf kleinen Bildschirmen volle Breite */
+  }
+
+.button__slider{
+  padding: 1rem 2rem;
+  background-color:white;
+  color: var(--black-color);
+  font-size: large;
+  align-items: flex-start;
+  display: grid;
+  float: inline-start;
+  place-items: center;
+}
+}
+/*=============== Itembox2 ===============*/
+.itembox2__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.itembox2__title{
+  font-family: var(--header-font);
+}
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: 500px;
+  display: block;
+  width:1080px;
+  margin:0rem 2rem;
+ z-index: 3rem;
+}
+
+
+.textbox {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 250px;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.textbox.top-left {
+  top: 10px;
+  left: 10px;
+  margin: 1rem 4rem;
+}
+
+.textbox.top-right {
+  top: 10px;
+  right: 10px;
+  margin: 1rem 4rem;
+}
+
+.textbox.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  margin: 1rem 4rem;
+}
+
+.textbox.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  margin: 1rem 4rem;
+}
+.itembox2__swiper{
+  margin: initial;
+  height: 1160px;
+}
+
+@media screen and (max-width: 650px) {
+  .textbox {
+      position: static;
+      margin: 10px 0;
+    
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    border-radius: 5px;
+    font-size: 15px;
+    max-width: 350px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .image-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: 400px;
+    display: block;
+    width:280px;
+    margin:0rem 2rem;
+   z-index: 3rem;
+  }
+   .button{
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 1.5rem;
+    transition: box-shadow .4s;
+    align-items: center;
+    align-self: center;
+    display: flex;
+
+   }
+
+   .button-sec {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--title-color);
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1rem 1.5rem;
+    margin: 2rem;
+    transition: box-shadow .4s;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    
+  }
+  .hero{
+    width: 80%;
+    height: 300px;
+  }
+
+
+
+}
+
+/*=============== Calendar ===============*/
+.hero{
+  width: 90%;
+  height: 750px;
+  display:block;
+  align-items: center;
+  display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    margin: auto;
+}
+.calendar__itembox3{
+  width: 100%;
+  height: 1000px;
+  margin-top: 20px;
+}
+
+/*=============== Music ===============*/
+
+.music-container .container__music{
+display: flex;
+align-items: center;
+flex-flow:column;
+}
+
+.container__music .music-container .box {
+
+  height: 16rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 1rem #5c5c5c;
+  overflow: hidden;
+  margin: 2rem;
+}
+.container__music .music-container .box .image{
+  height: 100%;
+  width: 25%;
+}
+.container__music .music-container .box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container__music .music-container .box .music {
+width: 75%;
+
+}
+.container__music .music-container .box .music audio {
+width: 100%;
+outline:none;
+}
+
+.container__music .music-container .box .music audio::-webkit-media-controls-enclosure{
+  background:none;
+
+}
+
+@media (max-width:600px) {
+  .container__music .music-container .box{
+    height: 27rem;
+    width: 90%;
+    flex-flow:column;
+  }
+  .container__music .music-container .box .image{
+    height: 80%;
+    width:100%;
+  }
+}
+/*=============== TESTIMONIAL ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+/* medium devices */
+@media screen and (min-width: 1150px){
+
+
+.container{
+  margin-inline: auto;
+}
+.home__container{
+
+  grid-template-columns: 435px 745px ;
+  align-items: center;
+  padding-block: 7rem 2rem;
+}
+
+.textbox{
+
+  font-size: 18px;
+}
+
+}
+/* For large devices */
