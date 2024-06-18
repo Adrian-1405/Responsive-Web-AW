@@ -184,7 +184,7 @@ flex: 1 100%;
 }
 
 .home__section{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.76),rgba(0, 0, 0, 0.76)), url(../images/proberaum-special-part-1-vorschau.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.76),rgba(0, 0, 0, 0.76)), url(images/proberaum-special-part-1-vorschau.jpg);
 }
 
 .home__data{
