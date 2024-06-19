@@ -21,9 +21,15 @@ let swiperHome = new Swiper('.home__swiper', {
   },
 
   breakpoints: {
-    1220: {
-      slidesPerView:4,
-      centeredSlides:false,
+    768: {
+      slidesPerView:'auto',
+      centeredSlides:'auto',
+    }
+  },
+  breakpoints: {
+    1250: {
+      sliderperview: 2,
+      centeredSlides: true,
     }
   }
 })
